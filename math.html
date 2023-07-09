@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quick Quiz - Play</title>
+    <link rel="stylesheet" href="css/str.css" />
+    <link rel="stylesheet" href="/css/menu.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/nature.css" />
+  </head>
+
+  <body>
+    <div class="sidebar close">
+      <div class="logo-details">
+        <i class='bx bar chart alt 2'></i>
+        <span class="logo_name">QuizStrength</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="menu.html">
+            <i class='bx bx-home'></i>
+            <span class="link_name">home</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="menu.html">Home</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="highscore.html">
+            <i class='bx bx-grid-alt'></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="highscore.html">Scores</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-collection'></i>
+              <span class="link_name">Category</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Category</a></li>
+            <li><a href="sports.html">Sports</a></li>
+            <li><a href="gk.html">GK</a></li>
+            <li><a href="movies.html">movies</a></li>
+            <li><a href="history.html">history</a></li>
+            <li><a href="science&math.html">science&math</a></li>
+            <li><a href="#">PHP & MySQL</a></li>
+          </ul>
+        </li>
+        <!-- <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-book-alt'></i>
+              <span class="link_name">Posts</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Posts</a></li>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Login Form</a></li>
+            <li><a href="#">Card Design</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-pie-chart-alt-2'></i>
+            <span class="link_name">Analytics</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Analytics</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-line-chart'></i>
+            <span class="link_name">Chart</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Chart</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class='bx bx-plug'></i>
+              <span class="link_name">Plugins</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Plugins</a></li>
+            <li><a href="#">UI Face</a></li>
+            <li><a href="#">Pigments</a></li>
+            <li><a href="#">Box Icons</a></li>
+          </ul>
+        </li> -->
+        <li>
+          <a href="quickplay.html">
+            <i class='bx bx-compass'></i>
+            <span class="link_name">quickplay</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="quickplay.html">quickplay</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-history'></i>
+            <span class="link_name">About</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">About</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="logout.html">
+            <i class='bx bx-log-out'></i>
+            <span class="link_name">Logout</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="logout.html">Logout</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="profile-details">
+            <div class="profile-content">
+              <img src="img/profile1.jpeg" alt="profileImg">
+            </div>
+            <div class="name-job">
+              <div class="profile_name">Tejas Shinde</div>
+              <div class="job">Web devloper</div>
+            </div>
+            <i class='bx bx-log-out'></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home-content">
+
+        <i class='bx bx-menu'></i>
+        <span class="text"></span>
+      </div>
+      <h1><span>QuizStrength</span> </h1>
+      <div class="container">
+        <div id="loader"></div>
+        <div id="game" class="justify-center flex-column hidden">
+          <div id="hud">
+            <div id="hud-item">
+              <p id="progressText" class="hud-prefix">
+                Question
+              </p>
+              <div id="progressBar">
+                <div id="progressBarFull"></div>
+              </div>
+            </div>
+            <div id="hud-item">
+              <p class="hud-prefix">
+                Score
+              </p>
+              <h1 class="hud-main-text" id="score">
+                0
+              </h1>
+            </div>
+          </div>
+          <h2 id="question"></h2>
+          <div class="choice-container">
+            <p class="choice-prefix">A</p>
+            <p class="choice-text" data-number="1"></p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">B</p>
+            <p class="choice-text" data-number="2"></p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">C</p>
+            <p class="choice-text" data-number="3"></p>
+          </div>
+          <div class="choice-container">
+            <p class="choice-prefix">D</p>
+            <p class="choice-text" data-number="4"></p>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+
+
+
+
+    <div>
+
+    </div>
+
+     
+    <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e) => {
+          let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+          arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+    </script>
+
+    <script src="/javascript/math.js"></script>
+  </body>
+
+</html>
